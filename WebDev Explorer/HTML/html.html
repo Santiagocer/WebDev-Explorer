@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev Explorer | HTML</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/PÁGINA U7 CD/CSS/html.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">WebDev Explorer</a>
+            <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Volver</a>
+        </nav>
+    </header>
+
+    <main class="content-container">
+        <div class="content-section">
+            <h2><i class="fab fa-html5"></i> Introducción a HTML</h2>
+            <p>HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web. Define la estructura y el contenido de una página mediante el uso de elementos y etiquetas.</p>
+            
+            <div class="info-card">
+                <h3>¿Qué es HTML?</h3>
+                <p>HTML no es un lenguaje de programación, sino un lenguaje de marcado que define la estructura de tu contenido. HTML consiste en una serie de elementos que usas para encerrar diferentes partes del contenido para que se vean o comporten de una determinada manera.</p>
+            </div>
+            
+            <div class="code-result-container">
+                <div class="code-column">
+                    <h3>Estructura básica HTML</h3>
+                    <div class="code-example">
+                        &lt;!DOCTYPE html&gt;<br>
+                        &lt;html lang="es"&gt;<br>
+                        &lt;head&gt;<br>
+                        &nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+                        &nbsp;&nbsp;&lt;title&gt;Mi Página&lt;/title&gt;<br>
+                        &lt;/head&gt;<br>
+                        &lt;body&gt;<br>
+                        &nbsp;&nbsp;&lt;h1&gt;Hola Mundo&lt;/h1&gt;<br>
+                        &nbsp;&nbsp;&lt;p&gt;Mi primera página web.&lt;/p&gt;<br>
+                        &lt;/body&gt;<br>
+                        &lt;/html&gt;
+                    </div>
+                </div>
+                
+                <div class="result-column">
+                    <h3>Resultado</h3>
+                    <div style="padding: 1rem;">
+                        <h1 style="color: var(--html-color);">Hola Mundo</h1>
+                        <p>Mi primera página web.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2>Elementos Semánticos</h2>
+            <p>HTML5 introdujo elementos semánticos que describen mejor su contenido tanto para el navegador como para el desarrollador.</p>
+            
+            <div class="info-card">
+                <h3>Importancia de la semántica</h3>
+                <p>Los elementos semánticos mejoran la accesibilidad, el SEO y hacen el código más legible. Ejemplos incluyen &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, &lt;section&gt;, &lt;footer&gt;, entre otros.</p>
+            </div>
+            
+            <div class="code-result-container">
+                <div class="code-column">
+                    <h3>Código HTML Semántico</h3>
+                    <div class="code-example">
+                        &lt;header&gt;<br>
+                        &nbsp;&nbsp;&lt;h1&gt;Mi Sitio Web&lt;/h1&gt;<br>
+                        &nbsp;&nbsp;&lt;nav&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;Inicio&lt;/a&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;Acerca de&lt;/a&gt;<br>
+                        &nbsp;&nbsp;&lt;/nav&gt;<br>
+                        &lt;/header&gt;<br>
+                        &lt;main&gt;<br>
+                        &nbsp;&nbsp;&lt;article&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Artículo Principal&lt;/h2&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Contenido del artículo...&lt;/p&gt;<br>
+                        &nbsp;&nbsp;&lt;/article&gt;<br>
+                        &lt;/main&gt;<br>
+                        &lt;footer&gt;<br>
+                        &nbsp;&nbsp;&lt;p&gt;Derechos reservados&lt;/p&gt;<br>
+                        &lt;/footer&gt;
+                    </div>
+                </div>
+                
+                <div class="result-column">
+                    <h3>Resultado</h3>
+                    <div style="padding: 1rem;">
+                        <header style="background: #f0f0f0; padding: 1rem; margin-bottom: 1rem; border-radius: 4px;">
+                            <h1 style="margin: 0; color: var(--html-color);">Mi Sitio Web</h1>
+                            <nav style="margin-top: 0.5rem;">
+                                <a href="#" style="margin-right: 1rem; color: var(--html-color);">Inicio</a>
+                                <a href="#" style="color: var(--html-color);">Acerca de</a>
+                            </nav>
+                        </header>
+                        <main style="margin-bottom: 1rem;">
+                            <article style="background: #f9f9f9; padding: 1rem; border-radius: 4px;">
+                                <h2 style="margin-top: 0;">Artículo Principal</h2>
+                                <p style="color: black;">Contenido del artículo...</p>
+                            </article>
+                        </main>
+                        <footer style="background: #f0f0f0; padding: 1rem; text-align: center; border-radius: 4px;">
+                            <p style="margin: 0; color: black;">Derechos reservados</p>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2>Formularios HTML</h2>
+            <p>Los formularios permiten la interacción del usuario con la página web, recopilando datos y enviándolos a un servidor.</p>
+            
+            <div class="info-card">
+                <h3>Elementos de formulario</h3>
+                <p>Los formularios usan elementos como &lt;input&gt;, &lt;textarea&gt;, &lt;select&gt;, &lt;button&gt; y otros. Cada uno tiene atributos importantes como type, name, placeholder, required, etc.</p>
+            </div>
+            
+            <div class="code-result-container">
+                <div class="code-column">
+                    <h3>Código de Formulario</h3>
+                    <div class="code-example">
+                        &lt;form action="/procesar" method="post"&gt;<br>
+                        &nbsp;&nbsp;&lt;div&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="nombre" name="nombre" required&gt;<br>
+                        &nbsp;&nbsp;&lt;/div&gt;<br>
+                        &nbsp;&nbsp;&lt;div&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="email"&gt;Email:&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="email" id="email" name="email" required&gt;<br>
+                        &nbsp;&nbsp;&lt;/div&gt;<br>
+                        &nbsp;&nbsp;&lt;div&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;textarea id="mensaje" name="mensaje" rows="4" required&gt;&lt;/textarea&gt;<br>
+                        &nbsp;&nbsp;&lt;/div&gt;<br>
+                        &nbsp;&nbsp;&lt;button type="submit"&gt;Enviar&lt;/button&gt;<br>
+                        &lt;/form&gt;
+                    </div>
+                </div>
+                
+                <div class="result-column">
+                    <h3>Resultado</h3>
+                    <div style="padding: 1rem;">
+                        <form style="max-width: 400px; margin: 0 auto;">
+                            <div style="margin-bottom: 1rem;">
+                                <label for="nombre" style="display: block; margin-bottom: 0.5rem;">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <label for="email" style="display: block; margin-bottom: 0.5rem;">Email:</label>
+                                <input type="email" id="email" name="email" required style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <label for="mensaje" style="display: block; margin-bottom: 0.5rem;">Mensaje:</label>
+                                <textarea id="mensaje" name="mensaje" rows="4" required style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+                            </div>
+                            <button type="submit" style="background-color: var(--html-color); color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2>Multimedia en HTML</h2>
+            <p>HTML5 introdujo elementos nativos para incluir multimedia sin necesidad de plugins.</p>
+            
+            <div class="info-card">
+                <h3>&lt;video&gt; y &lt;audio&gt;</h3>
+                <p>Estos elementos permiten incrustar contenido multimedia directamente en tus páginas. Puedes controlar la reproducción con JavaScript y personalizar los controles.</p>
+            </div>
+            
+            <div class="code-result-container">
+                <div class="code-column">
+                    <h3>Código Multimedia</h3>
+                    <div class="code-example">
+                        &lt;!-- Video --&gt;<br>
+                        &lt;video width="400" controls&gt;<br>
+                        &nbsp;&nbsp;&lt;source src="video.mp4" type="video/mp4"&gt;<br>
+                        &nbsp;&nbsp;Tu navegador no soporta videos HTML5.<br>
+                        &lt;/video&gt;<br><br>
+                        &lt;!-- Audio --&gt;<br>
+                        &lt;audio controls&gt;<br>
+                        &nbsp;&nbsp;&lt;source src="audio.mp3" type="audio/mpeg"&gt;<br>
+                        &nbsp;&nbsp;Tu navegador no soporta audio HTML5.<br>
+                        &lt;/audio&gt;
+                    </div>
+                </div>
+                
+                <div class="result-column">
+                    <h3>Resultado</h3>
+                    <div style="padding: 1rem;">
+                        <div style="margin-bottom: 1rem; background: #f5f5f5; padding: 1rem; border-radius: 4px;">
+                            <p><strong>Video:</strong> (Ejemplo sin archivo real)</p>
+                            <div style="width: 100%; height: 200px; background: #ddd; display: flex; justify-content: center; align-items: center; border-radius: 4px; color: black;">
+                                [Área de video]
+                            </div>
+                        </div>
+                        <div style="background: #f5f5f5; padding: 1rem; border-radius: 4px;">
+                            <p style="color: black;"><strong>Audio:</strong> (Ejemplo sin archivo real)</p>
+                            <div style="width: 100%; padding: 1rem 0; display: flex; justify-content: center; align-items: center; background: #eee; border-radius: 4px; color: black;">
+                                [Área de audio]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>WebDev Explorer - Aprendiendo HTML</p>
+            <div class="copyright">
+                <p id="copyright-text"></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="/PÁGINA U7 CD/JS/html.js"></script>
+</body>
+</html>

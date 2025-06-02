@@ -1,0 +1,188 @@
+        :root {
+            --html-color: #e34c26;
+            --dark-bg: #1a1a2e;
+            --light-bg: #f8f9fa;
+            --text-dark: #333;
+            --text-light: #f8f9fa;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        body.dark-mode {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+        }
+        
+        header {
+            background-color: var(--html-color);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Aumentado a 1000 */
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .back-button {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .content-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            flex: 1;
+            position: relative;
+            z-index: 1; /* Añadido para jerarquía de apilamiento */
+        }
+        
+        .content-section {
+            margin-bottom: 3rem;
+        }
+        
+        .content-section h2 {
+            color: var(--html-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--html-color);
+        }
+        
+        .code-example {
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            padding: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        
+        .dark-mode .code-example {
+            background-color: #333;
+            color: #f8f8f8;
+        }
+        
+        .code-result-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .code-column, .result-column {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .dark-mode .code-column, 
+        .dark-mode .result-column {
+            background: #2a2a3a;
+        }
+        
+        .code-column {
+            border-left: 4px solid var(--html-color);
+        }
+        
+        .result-column {
+            border-left: 4px solid #6e48aa;
+        }
+        
+        .info-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--html-color);
+        }
+        
+        .dark-mode .info-card {
+            background: #2a2a3a;
+        }
+        
+        .info-card h3 {
+            color: var(--html-color);
+            margin-top: 0;
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--html-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+            z-index: 100;
+            transition: var(--transition);
+        }
+        
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .copyright {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #555;
+        }
+        
+        @media (max-width: 768px) {
+            .code-result-container {
+                grid-template-columns: 1fr;
+            }
+        }

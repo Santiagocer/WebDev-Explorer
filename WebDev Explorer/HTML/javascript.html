@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev Explorer | JavaScript</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/PÁGINA U7 CD/CSS/javascript.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">WebDev Explorer</a>
+            <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Volver</a>
+        </nav>
+    </header>
+
+    <main class="content-container">
+        <div class="content-section">
+            <h2><i class="fab fa-js"></i> Introducción a JavaScript</h2>
+            <p>JavaScript es un lenguaje de programación que permite implementar funciones complejas en páginas web.</p>
+            
+            <div class="info-card">
+                <h3>¿Qué es JavaScript?</h3>
+                <p>JavaScript es un lenguaje de programación interpretado, orientado a objetos, utilizado principalmente en el desarrollo web para añadir interactividad a las páginas.</p>
+            </div>
+            
+            <div class="code-result-container">
+                <div class="code-column">
+                    <h3>Sintaxis básica</h3>
+                    <div class="code-example">
+                        // Variables<br>
+                        let nombre = "Juan";<br>
+                        const edad = 30;<br>
+                        var esEstudiante = true;<br><br>
+                        // Función<br>
+                        function saludar(persona) {<br>
+                        &nbsp;&nbsp;return "Hola, " + persona;<br>
+                        }<br><br>
+                        // Condicional<br>
+                        if (edad >= 18) {<br>
+                        &nbsp;&nbsp;console.log("Mayor de edad");<br>
+                        } else {<br>
+                        &nbsp;&nbsp;console.log("Menor de edad");<br>
+                        }<br><br>
+                        // Bucle<br>
+                        for (let i = 0; i < 5; i++) {<br>
+                        &nbsp;&nbsp;console.log("Iteración: " + i);<br>
+                        }
+                    </div>
+                </div>
+                
+                <div class="result-column">
+                    <h3>Resultado en consola</h3>
+                    <div style="padding: 1rem; background: #f5f5f5; border-radius: 4px; font-family: monospace; color: black;">
+                        <p>> Hola, Juan</p>
+                        <p>> Mayor de edad</p>
+                        <p>> Iteración: 0</p>
+                        <p>> Iteración: 1</p>
+                        <p>> Iteración: 2</p>
+                        <p>> Iteración: 3</p>
+                        <p>> Iteración: 4</p>
+                    </div>
+                    <button id="run-basic-code" class="js-button" style="margin-top: 1rem;">Ejecutar código</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2>Manipulación del DOM</h2>
+            <p>El DOM (Document Object Model) permite a JavaScript interactuar con los elementos HTML de una página.</p>
+            
+            <div class="info-card">
+                <h3>¿Qué es el DOM?</h3>
+                <p>El DOM es una representación en forma de árbol de los elementos de un documento HTML. JavaScript puede modificar este árbol para cambiar el contenido, la estructura o el estilo de la página.</p>
+            </div>
+            
+            <div class="code-result-container">
+                <div class="code-column">
+                    <h3>Código DOM</h3>
+                    <div class="code-example">
+                        // Seleccionar elementos<br>
+                        const titulo = document.getElementById('titulo');<br>
+                        const parrafos = document.querySelectorAll('p');<br><br>
+                        // Modificar contenido<br>
+                        titulo.textContent = 'Nuevo título';<br><br>
+                        // Crear nuevo elemento<br>
+                        const nuevoParrafo = document.createElement('p');<br>
+                        nuevoParrafo.textContent = 'Este es un nuevo párrafo';<br>
+                        document.body.appendChild(nuevoParrafo);<br><br>
+                        // Cambiar estilos<br>
+                        titulo.style.color = '#f0db4f';<br>
+                        titulo.style.backgroundColor = '#333';
+                    </div>
+                </div>
+                
+                <div class="result-column">
+                    <h3>Resultado</h3>
+                    <div style="padding: 1rem;">
+                        <h3 id="titulo-dom" style="color: #a5a5a5; padding: 0.5rem;">Título original</h3>
+                        <p>Este es un párrafo existente.</p>
+                        <button id="dom-button" class="js-button">Modificar DOM</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2>Eventos</h2>
+            <p>JavaScript puede responder a eventos del usuario como clicks, movimientos del ratón, pulsaciones de teclas, etc.</p>
+            
+            <div class="info-card">
+                <h3>Tipos de eventos</h3>
+                <p>Los eventos más comunes incluyen click, mouseover, mouseout, keydown, keyup, submit, change, load y muchos más. Puedes escuchar estos eventos con addEventListener().</p>
+            </div>
+            
+            <div class="code-result-container">
+                <div class="code-column">
+                    <h3>Código de Eventos</h3>
+                    <div class="code-example">
+                        const boton = document.getElementById('miBoton');<br>
+                        const contador = document.getElementById('contador');<br>
+                        let cuenta = 0;<br><br>
+                        // Evento click<br>
+                        boton.addEventListener('click', () => {<br>
+                        &nbsp;&nbsp;cuenta++;<br>
+                        &nbsp;&nbsp;contador.textContent = cuenta;<br>
+                        &nbsp;&nbsp;boton.style.transform = 'scale(1.1)';<br>
+                        &nbsp;&nbsp;setTimeout(() => {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;boton.style.transform = 'scale(1)';<br>
+                        &nbsp;&nbsp;}, 200);<br>
+                        });<br><br>
+                        // Evento teclado<br>
+                        document.addEventListener('keydown', (event) => {<br>
+                        &nbsp;&nbsp;if (event.key === 'Enter') {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log('Enter presionado');<br>
+                        &nbsp;&nbsp;}<br>
+                        });
+                    </div>
+                </div>
+                
+                <div class="result-column">
+                    <h3>Resultado</h3>
+                    <div style="padding: 1rem; text-align: center;">
+                        <button id="miBoton" class="js-button">Haz clic</button>
+                        <p style="margin-top: 1rem;">Contador: <span id="contador">0</span></p>
+                        <p style="margin-top: 1rem; font-size: 0.9rem;">También prueba presionar Enter</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2>Fetch API</h2>
+            <p>La API Fetch proporciona una interfaz para recuperar recursos (incluyendo a través de la red).</p>
+            
+            <div class="info-card">
+                <h3>Async/Await</h3>
+                <p>async/await es una forma moderna de trabajar con promesas en JavaScript, haciendo que el código asíncrono sea más fácil de leer y escribir.</p>
+            </div>
+            
+            <div class="code-result-container">
+                <div class="code-column">
+                    <h3>Código Fetch</h3>
+                    <div class="code-example">
+                        async function obtenerUsuarios() {<br>
+                        &nbsp;&nbsp;try {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;const respuesta = await fetch(<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'https://jsonplaceholder.typicode.com/users'<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;const usuarios = await respuesta.json();<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;mostrarUsuarios(usuarios);<br>
+                        &nbsp;&nbsp;} catch (error) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.error('Error:', error);<br>
+                        &nbsp;&nbsp;}<br>
+                        }<br><br>
+                        function mostrarUsuarios(usuarios) {<br>
+                        &nbsp;&nbsp;const lista = document.getElementById('lista-usuarios');<br>
+                        &nbsp;&nbsp;lista.innerHTML = usuarios<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;.map(user => `&lt;li&gt;${user.name}&lt;/li&gt;`)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;.join('');<br>
+                        }<br><br>
+                        document.getElementById('cargar-btn')<br>
+                        &nbsp;&nbsp;.addEventListener('click', obtenerUsuarios);
+                    </div>
+                </div>
+                
+                <div class="result-column">
+                    <h3>Resultado</h3>
+                    <div style="padding: 1rem;">
+                        <button id="cargar-btn" class="js-button">Cargar Usuarios</button>
+                        <ul id="lista-usuarios" style="margin-top: 1rem; list-style: inside;"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2>LocalStorage</h2>
+            <p>LocalStorage permite almacenar datos en el navegador del usuario de forma persistente.</p>
+            
+            <div class="info-card">
+                <h3>Almacenamiento web</h3>
+                <p>Además de localStorage, existe sessionStorage (datos se borran al cerrar la pestaña) y cookies (para pequeñas cantidades de datos).</p>
+            </div>
+            
+            <div class="code-result-container">
+        <div class="code-column">
+            <h3>Código LocalStorage</h3>
+            <div class="code-example">
+                // Guardar dato (string o objeto)<br>
+                localStorage.setItem('clave', 'valor');<br>
+                localStorage.setItem('usuario', JSON.stringify({ nombre: 'Juan' }));<br><br>
+                
+                // Mostrar todos los datos<br>
+                Object.entries(localStorage).forEach(([clave, valor]) => {<br>
+                &nbsp;&nbsp;console.log(`${clave}: ${valor}`);<br>
+                });<br><br>
+                
+                // Exportar datos como JSON<br>
+                const datos = JSON.stringify(Object.fromEntries(Object.entries(localStorage)));<br>
+                const blob = new Blob([datos], { type: 'application/json' });<br>
+                const url = URL.createObjectURL(blob);<br>
+                const a = document.createElement('a');<br>
+                a.href = url;<br>
+                a.download = 'backup-localStorage.json';<br>
+                a.click();<br>
+                URL.revokeObjectURL(url);
+            </div>
+        </div>
+        
+        <div class="result-column">
+            <h3>Interactivo</h3>
+            <div style="padding: 1rem; text-align: center;">
+                <div style="margin-bottom: 1rem;">
+                    <input type="text" id="storage-key" placeholder="Clave (ej: 'user')" class="storage-input">
+                    <input type="text" id="storage-value" placeholder="Valor (ej: 'Juan')" class="storage-input">
+                </div>
+                
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
+                    <button id="guardar" class="js-button">Guardar</button>
+                    <button id="obtener" class="js-button">Obtener</button>
+                    <button id="borrar" class="js-button">Borrar</button>
+                    <button id="mostrar-todos" class="js-button">Mostrar Todos</button>
+                    <button id="exportar" class="js-button">Exportar JSON</button>
+                    <button id="limpiar-todo" class="js-button">Limpiar Todo</button>
+                </div>
+                
+                <div id="storage-result" style="margin-top: 1rem; text-align: left;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>WebDev Explorer - Aprendiendo JavaScript</p>
+            <div class="copyright">
+                <p id="copyright-text"></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="/PÁGINA U7 CD/JS/javascript.js"></script>
+</body>
+</html>

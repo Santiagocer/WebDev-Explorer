@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev Explorer | Inicio</title>
+    <meta name="description" content="Plataforma para aprender desarrollo web">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/PÁGINA U7 CD/CSS/index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">WebDev Explorer</a>
+            <div class="nav-links">
+                <a href="html.html" class="nav-link"><i class="fab fa-html5"></i> HTML</a>
+                <a href="css.html" class="nav-link"><i class="fab fa-css3-alt"></i> CSS</a>
+                <a href="javascript.html" class="nav-link"><i class="fab fa-js"></i> JavaScript</a>
+                <a href="#resources" class="nav-link"><i class="fas fa-external-link-alt"></i> Recursos</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="home-container">
+        <h1>Aprende Desarrollo Web</h1>
+        <p>Selecciona un lenguaje para comenzar tu aprendizaje</p>
+        
+        <!-- Tarjetas estáticas en fila -->
+        <div class="language-options">
+            <a href="html.html" class="language-card html-card">
+                <i class="fab fa-html5 fa-3x" style="color: var(--html-color);"></i>
+                <h2>HTML5</h2>
+                <p>El lenguaje fundamental para estructurar contenido web</p>
+                <span class="resource-link">Explorar HTML →</span>
+            </a>
+            
+            <a href="css.html" class="language-card css-card">
+                <i class="fab fa-css3-alt fa-3x" style="color: var(--css-color);"></i>
+                <h2>CSS3</h2>
+                <p>Estilos y diseño para hacer tus páginas atractivas</p>
+                <span class="resource-link">Explorar CSS →</span>
+            </a>
+            
+            <a href="javascript.html" class="language-card js-card">
+                <i class="fab fa-js fa-3x" style="color: var(--js-color);"></i>
+                <h2>JavaScript</h2>
+                <p>Interactividad y lógica para aplicaciones web dinámicas</p>
+                <span class="resource-link">Explorar JavaScript →</span>
+            </a>
+        </div>
+
+        <!-- Sección de recursos -->
+        <section class="resource-section" id="resources">
+            <h2>Recursos Recomendados</h2>
+            
+            <div class="resource-tabs">
+                <div class="resource-tab active" data-tab="videos">Videos</div>
+                <div class="resource-tab" data-tab="documentos">Documentos</div>
+                <div class="resource-tab" data-tab="webs">Páginas Web</div>
+            </div>
+            
+            <!-- Videos -->
+            <div class="tab-content active" id="videos-tab">
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <h3><i class="fab fa-youtube"></i> Curso HTML Completo</h3>
+                        <p>Tutorial completo de HTML5 desde cero por Fazt Code.</p>
+                        <a href="https://www.youtube.com/watch?v=rbuYtrNUxg4" target="_blank" class="resource-link">Ver video →</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3><i class="fab fa-youtube"></i> CSS en 1 hora</h3>
+                        <p>Aprende CSS3 rápido con este tutorial condensado.</p>
+                        <a href="https://www.youtube.com/watch?v=OWKXEJN67FE" target="_blank" class="resource-link">Ver video →</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3><i class="fab fa-youtube"></i> JavaScript Moderno</h3>
+                        <p>Guía completa de JavaScript ES6+ por midudev.</p>
+                        <a href="https://www.youtube.com/watch?v=7uLNKn4XK6w" target="_blank" class="resource-link">Ver video →</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3><i class="fab fa-youtube"></i> Flexbox en 15 minutos</h3>
+                        <p>Domina Flexbox con este tutorial rápido y práctico.</p>
+                        <a href="https://www.youtube.com/watch?v=JJSoEo8JSnc" target="_blank" class="resource-link">Ver video →</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3><i class="fab fa-youtube"></i> Grid CSS Completo</h3>
+                        <p>Aprende CSS Grid Layout con ejemplos prácticos.</p>
+                        <a href="https://www.youtube.com/watch?v=HpH12iNlLmg" target="_blank" class="resource-link">Ver video →</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3><i class="fab fa-youtube"></i> DOM Manipulation</h3>
+                        <p>Cómo manipular el DOM con JavaScript eficientemente.</p>
+                        <a href="https://www.youtube.com/watch?v=5fb2aPlgoys" target="_blank" class="resource-link">Ver video →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Documentos -->
+            <div class="tab-content" id="documentos-tab">
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <h3><i class="fas fa-file-pdf"></i> Guía HTML5</h3>
+                        <p>Manual completo de HTML5 en formato PDF.</p>
+                        <a href="https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf" target="_blank" class="resource-link">Descargar →</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3><i class="fas fa-file-pdf"></i> Cheatsheet CSS3</h3>
+                        <p>Hoja de referencia rápida de propiedades CSS.</p>
+                        <a href="https://web.stanford.edu/group/csp/cs21/csscheatsheet.pdf" target="_blank" class="resource-link">Descargar →</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3><i class="fas fa-file-pdf"></i> JavaScript ES6</h3>
+                        <p>Guía de características modernas de JavaScript.</p>
+                        <a href="https://exploringjs.com/es6/downloads/exploring-es6.pdf" target="_blank" class="resource-link">Descargar →</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3><i class="fas fa-file-pdf"></i> Flexbox Guía</h3>
+                        <p>Documento completo sobre Flexbox Layout.</p>
+                        <a href="https://flexbox.malven.co/" target="_blank" class="resource-link">Descargar →</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3><i class="fas fa-file-pdf"></i> Grid CSS Guía</h3>
+                        <p>Manual de referencia para CSS Grid.</p>
+                        <a href="https://grid.malven.co/" target="_blank" class="resource-link">Descargar →</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3><i class="fas fa-file-pdf"></i> JavaScript Patterns</h3>
+                        <p>Patrones de diseño en JavaScript (PDF).</p>
+                        <a href="https://addyosmani.com/resources/essentialjsdesignpatterns/book/" target="_blank" class="resource-link">Descargar →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Páginas Web -->
+            <div class="tab-content" id="webs-tab">
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <h3><i class="fas fa-globe"></i> MDN Web Docs</h3>
+                        <p>Documentación oficial de tecnologías web.</p>
+                        <a href="https://developer.mozilla.org" target="_blank" class="resource-link">Visitar →</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3><i class="fas fa-globe"></i> FreeCodeCamp</h3>
+                        <p>Cursos gratuitos con certificación.</p>
+                        <a href="https://www.freecodecamp.org" target="_blank" class="resource-link">Visitar →</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3><i class="fas fa-globe"></i> The Odin Project</h3>
+                        <p>Ruta completa de aprendizaje web.</p>
+                        <a href="https://www.theodinproject.com" target="_blank" class="resource-link">Visitar →</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3><i class="fas fa-globe"></i> CodePen</h3>
+                        <p>Plataforma para compartir y probar código.</p>
+                        <a href="https://codepen.io" target="_blank" class="resource-link">Visitar →</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3><i class="fas fa-globe"></i> CSS-Tricks</h3>
+                        <p>Trucos y guías avanzadas de CSS.</p>
+                        <a href="https://css-tricks.com" target="_blank" class="resource-link">Visitar →</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3><i class="fas fa-globe"></i> JavaScript.info</h3>
+                        <p>Guía moderna de JavaScript.</p>
+                        <a href="https://javascript.info" target="_blank" class="resource-link">Visitar →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>WebDev Explorer - Plataforma educativa para aprender desarrollo web</p>
+            <div class="copyright">
+                <p id="copyright-text"></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="/PÁGINA U7 CD/JS/index.js"></script>
+</body>
+</html>
